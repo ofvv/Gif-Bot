@@ -6,8 +6,12 @@ Send User Avatars To a Channel!
 ```json
 {
   "bot": {
-    "token": "bottoken"
+    "token": "bot token"
   },
-  "channel": "channel to send embed"
+  "channels": {
+    "gif": "channel id",
+    "icon": "channel id"
+  }
 }
+
 ```
