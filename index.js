@@ -15,7 +15,6 @@ client.on('ready', async () => {
 
 client.on('userUpdate', async (oldu, newu) => {
   if (newu.bot) return;
-  if (!newu.displayAvatarURL()) return;
   if (oldu.displayAvatarURL() != newu.displayAvatarURL()) {
     let embed = new discord.MessageEmbed()
       .setImage(newu.displayAvatarURL({
