@@ -25,7 +25,7 @@ client.on('userUpdate', async (oldu, newu) => {
       .setImage(newu.displayAvatarURL({
         dynamic: true,
         size: 4096
-      });)
+      }))
       .setFooter(newu.id)
       .setColor('#000001')
     if (newav.includes('.gif')) {
