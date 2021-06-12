@@ -1,0 +1,6 @@
+{
+  "bot": {
+    "token": "bottoken"
+  },
+  "channel": "channel to send embed"
+}
