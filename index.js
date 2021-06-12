@@ -22,7 +22,10 @@ client.on('userUpdate', async (oldu, newu) => {
   if (!newav) return;
   if (oldav != newav) {
     let embed = new discord.MessageEmbed()
-      .setImage(newav)
+      .setImage(newu.displayAvatarURL({
+        dynamic: true,
+        size: 4096
+      });)
       .setFooter(newu.id)
       .setColor('#000001')
     if (newav.includes('.gif')) {
