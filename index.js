@@ -12,23 +12,25 @@ client.on('ready', async () => {
 })
 
 client.on('userUpdate', async (oldu, newu) => {
-  const oldav = oldu.displayAvatarURL({
-    dynamic: true
-  });
-  const newav = newu.displayAvatarURL({
-    dynamic: true
-  });
-  if (oldav != newav) {
-    let embed = new discord.MessageEmbed()
-      .setImage(newav)
-      .setFooter(newu.id)
-      .setColor('#000001')
-    if (newav.includes('.gif')) {
-      client.channels.cache.get(config.channels.gif).send(embed)
-    } else {
-      client.channels.cache.get(config.channels.icon).send(embed)
+  try {
+    const oldav = oldu.displayAvatarURL({
+      dynamic: true
+    });
+    const newav = newu.displayAvatarURL({
+      dynamic: true
+    });
+    if (oldav != newav) {
+      let embed = new discord.MessageEmbed()
+        .setImage(newav)
+        .setFooter(newu.id)
+        .setColor('#000001')
+      if (newav.includes('.gif')) {
+        client.channels.cache.get(config.channels.gif).send(embed)
+      } else {
+        client.channels.cache.get(config.channels.icon).send(embed)
+      }
     }
-  }
+  } catch (e) {}
 })
 
 
