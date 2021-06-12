@@ -2,5 +2,8 @@
   "bot": {
     "token": "bottoken"
   },
-  "channel": "channel to send embed"
+  "channels": {
+    "gif": "id",
+    "icon": "id"
+  }
 }
