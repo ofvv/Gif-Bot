@@ -12,6 +12,7 @@ client.on('ready', async () => {
 })
 
 client.on('userUpdate', async (oldu, newu) => {
+  if (newu.bot) return;
   const oldav = oldu.displayAvatarURL({
     dynamic: true
   });
